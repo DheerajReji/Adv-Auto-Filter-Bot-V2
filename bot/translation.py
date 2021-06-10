@@ -4,7 +4,7 @@
 
 class Translation(object):
     
-    START_TEXT = """<b>Hey {}!!</b>
+    START_TEXT = """<b>Hey {} How Are You !!</b>
 <i>Am Just A Advance Auto Filter Bot 😈
 MY OWNER IS NEGAN.ONLY HE CAN USE ME 😪
 For More Details Click Help Button Below..
