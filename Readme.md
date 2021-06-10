@@ -77,7 +77,9 @@ You can deploy this bot anywhere.
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
-</details>
+</details>https://heroku.com/deploy?template=https://github.com/DheerajReji
+/
+Adv-Auto-Filter-Bot-V2/tree/main
 
 <details><summary>Deploy To VPS</summary>
 <p>
