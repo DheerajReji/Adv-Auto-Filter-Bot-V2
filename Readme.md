@@ -73,13 +73,13 @@ You can deploy this bot anywhere.
 <details><summary>Deploy To Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/DheerajReji/Adv-Auto-Filter-Bot-V2/tree/main">
+<a href="https://heroku.com/deploy?template=https://github.com/DheerajReji/Advanced-auto-filter-bot/tree/main">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
 </details>https://heroku.com/deploy?template=https://github.com/DheerajReji
 /
-Adv-Auto-Filter-Bot-V2/tree/main
+Advanced-auto-filter-bot/tree/main
 
 <details><summary>Deploy To VPS</summary>
 <p>
