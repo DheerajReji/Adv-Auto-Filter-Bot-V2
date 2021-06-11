@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developer', url="https://t.me/the_johnniewalker"
+                                    '🔆 JOIN OUR GROUP 🔆', url="https://t.me/joinchat/NfFdC-5j5YxhMTc1"
                                 )
                         ]
                     ]
@@ -89,12 +89,11 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('Developer', url='https://t.me/the_johnniewalker'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/DheerajReji/Advanced-Auto-Filter-Bot')
+        InlineKeyboardButton('🤍 MY DEVELOPER 🤍', url='https://t.me/the_johnniewalker')
     ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/the_johnniewalker')
+        InlineKeyboardButton('🔆JOIN OUR GROUP🔆', url='https://t.me/joinchat/NfFdC-5j5YxhMTc1')
     ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
+        InlineKeyboardButton('⚙️ HELP ⚙️', callback_data="help")
     ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -112,8 +111,7 @@ async def start(bot, update):
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
 async def help(bot, update):
     buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('About 🚩', callback_data='about')
+        InlineKeyboardButton('Home ⚡', callback_data='start') 
     ],[
         InlineKeyboardButton('Close 🔐', callback_data='close')
     ]]
@@ -124,25 +122,6 @@ async def help(bot, update):
         chat_id=update.chat.id,
         text=Translation.HELP_TEXT,
         reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
-
-
-@Client.on_message(filters.command(["about"]) & filters.private, group=1)
-async def about(bot, update):
-    
-    buttons = [[
-        InlineKeyboardButton('Home ⚡', callback_data='start'),
-        InlineKeyboardButton('Close 🔐', callback_data='close')
-    ]]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.ABOUT_TEXT,
-        reply_markup=reply_markup,
-        disable_web_page_preview=True,
         parse_mode="html",
         reply_to_message_id=update.message_id
     )
