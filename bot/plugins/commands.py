@@ -38,7 +38,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    '🔆 JOIN OUR GROUP 🔆', url="https://t.me/joinchat/NfFdC-5j5YxhMTc1"
+                                    '🔆 AMIGO CINEMAS 🔆', url="https://t.me/joinchat/NfFdC-5j5YxhMTc1"
                                 )
                         ]
                     ]
