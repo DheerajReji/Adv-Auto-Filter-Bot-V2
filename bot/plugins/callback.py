@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<i>Found</i> <code>{leng}</code> <i>Results For Your Query:</i> <code>{query}</code>"
+    text=f"<i>Found</i> <code>{leng}</code> <i>📌 Results For Your Query:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -1639,12 +1639,9 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('My Dev 👨‍🔬', url='https://t.me/AlbertEinstein_TG'),
-            InlineKeyboardButton('Source Code 🧾', url ='https://github.com/AlbertEinsteinTG/Adv-Auto-Filter-Bot')
+            InlineKeyboardButton('🤍 MY DEVELOPER 🤍', url='https://t.me/the_johnniewalker')
         ],[
-            InlineKeyboardButton('Support 🛠', url='https://t.me/CrazyBotszGrp')
-        ],[
-            InlineKeyboardButton('Help ⚙', callback_data="help")
+            InlineKeyboardButton('🔆 AMIGO CINEMAS 🔆', url='https://t.me/joinchat/NfFdC-5j5YxhMTc1')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1655,44 +1652,6 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html",
             disable_web_page_preview=True
         )
-
-
-    elif query_data == "help":
-        buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('About 🚩', callback_data='about')
-        ],[
-            InlineKeyboardButton('Close 🔐', callback_data='close')
-        ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
-        
-        await update.message.edit_text(
-            Translation.HELP_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html",
-            disable_web_page_preview=True
-        )
-
-
-    elif query_data == "about": 
-        buttons = [[
-            InlineKeyboardButton('Home ⚡', callback_data='start'),
-            InlineKeyboardButton('Close 🔐', callback_data='close')
-        ]]
-        
-        reply_markup = InlineKeyboardMarkup(buttons)
-        
-        await update.message.edit_text(
-            Translation.ABOUT_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html"
-        )
-
-
-    elif query_data == "close":
-        await update.message.delete()
-
 
 
 def time_formatter(seconds: float) -> str:
