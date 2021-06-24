@@ -19,6 +19,8 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 
 DB_URI = os.environ.get("DB_URI")
 
+MASSAGE_PHOTO = os.environ.get("TEXT_MEG_PH")
+
 USER_SESSION = os.environ.get("USER_SESSION")
 
 VERIFY = {}
