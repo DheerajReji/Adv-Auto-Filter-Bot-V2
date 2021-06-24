@@ -81,7 +81,7 @@ async def cb_navg(bot, update: CallbackQuery):
 
     if ((index_val + 1 )== max_pages) or ((index_val + 1) == len(results)): # Max Pages
         temp_results.append([
-            InlineKeyboardButton("«««", callback_data=f"navigate({index_val}|back|{query})")
+            InlineKeyboardButton("⏪ Back", callback_data=f"navigate({index_val}|back|{query})")
         ])
 
     elif int(index_val) == 0:
@@ -89,13 +89,13 @@ async def cb_navg(bot, update: CallbackQuery):
 
     else:
         temp_results.append([
-            InlineKeyboardButton("«««", callback_data=f"navigate({index_val}|back|{query})"),
-            InlineKeyboardButton("»»»", callback_data=f"navigate({index_val}|next|{query})")
+            InlineKeyboardButton("⏪ Back", callback_data=f"navigate({index_val}|back|{query})"),
+            InlineKeyboardButton("Next ⏩", callback_data=f"navigate({index_val}|next|{query})")
         ])
 
     if not int(index_val) == 0:    
         temp_results.append([
-            InlineKeyboardButton(f"📑 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 📑", callback_data="ignore")
+            InlineKeyboardButton(f"🔰 Page {index_val + 1}/{len(results) if len(results) < max_pages else max_pages} 🔰", callback_data="ignore")
         ])
     
     if show_invite and int(index_val) !=0 :
@@ -142,7 +142,7 @@ async def cb_navg(bot, update: CallbackQuery):
     
     reply_markup = InlineKeyboardMarkup(temp_results)
     
-    text=f"<b>🗂️Total File :- {leng}</b>\n<b>🎬Movie Name :-</b> <code>{query}</code>"
+    text=f"<i>Found</i> <code>{leng}</code> <i>📌 Results For Your Query:</i> <code>{query}</code>"
         
     try:
         await update.message.edit(
@@ -1601,14 +1601,14 @@ async def cb_about(bot, update: CallbackQuery):
     text=f"<i><u>Bot's Status</u></i>\n"
     text+=f"\n<b><i>Bot's Uptime:</i></b> <code>{time_formatter(time.time() - start_uptime)}</code>\n"
     text+=f"\n<b><i>Bot Funtion:</i></b> <i>Auto Filter Files</i>\n"
-    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/Mo_Tech_YT">Mo Tech YT</a>\n"""
-    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/Mo_Tech_YT/Pro-Filter-Bot-V2">Source</a>"""
+    text+=f"""\n<b><i>Bot Support:</i></b> <a href="https://t.me/CrazyBotszGrp">@CrazyBotszGrp</a>\n"""
+    text+="""\n<b><i>Source Code:</i></b> <a href="https://github.com/AlbertEinsteinTG/Adv-Filter-Bot-V2">Source</a>"""
 
     buttons = [
         [
             InlineKeyboardButton
                 (
-                    "My Dev ⚡", url="https://t.me/Mo_Tech_Group"
+                    "My Dev ⚡", url="https://t.me/AlbertEinstein_TG"
                 ),
                 
             InlineKeyboardButton
@@ -1639,15 +1639,9 @@ async def callback_data(bot, update: CallbackQuery):
 
     if query_data == "start":
         buttons = [[
-            InlineKeyboardButton('👨‍💼𝙼𝚢 𝙳𝚎𝚟', url='https://t.me/MRK_YT'),
-            InlineKeyboardButton('𝚂𝚘𝚞𝚛𝚌𝚎 𝙲𝚘𝚍𝚎🧾', url ='https://github.com/MoTectYT/Pro-Auto-Filter-Bot-V2')
+            InlineKeyboardButton('🤍 MY DEVELOPER 🤍', url='https://t.me/the_johnniewalker')
         ],[
-            InlineKeyboardButton('⚙️𝙷𝚎𝚕𝚙⚙️', callback_data="help")
-        ],[
-            InlineKeyboardButton('🗣️𝙰𝚗𝚢 𝙳𝚘𝚞𝚋𝚝', url='https://t.me/Mo_Tech_group'),
-            InlineKeyboardButton('𝚄𝚙𝚍𝚊𝚝𝚎𝚜🤖', url='https://t.me/Mo_Tech_YT')
-        ],[
-            InlineKeyboardButton('🖥️ 𝚃𝚞𝚝𝚘𝚛𝚒𝚊𝚕 𝚅𝚒𝚍𝚎𝚘 🖥️', url='https://youtu.be/OTqZmADyOjU')
+            InlineKeyboardButton('🔆 AMIGO CINEMAS 🔆', url='https://t.me/joinchat/NfFdC-5j5YxhMTc1')
         ]]
     
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1658,49 +1652,6 @@ async def callback_data(bot, update: CallbackQuery):
             parse_mode="html",
             disable_web_page_preview=True
         )
-
-
-    elif query_data == "help":
-        buttons = [[
-            InlineKeyboardButton('🏠 𝙷𝚘𝚖𝚎', callback_data='start'),
-            InlineKeyboardButton('𝙰𝚋𝚘𝚞𝚝 🚩', callback_data='about')
-        ],[
-            InlineKeyboardButton('🔐 𝙲𝚕𝚘𝚜𝚎 🔐', callback_data='close')
-        ]]
-    
-        reply_markup = InlineKeyboardMarkup(buttons)
-        
-        await update.message.edit_text(
-            Translation.HELP_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html",
-            disable_web_page_preview=True
-        )
-
-
-    elif query_data == "about": 
-        buttons = [[
-            InlineKeyboardButton('👤Mrk YT', url='https://t.me/MRK_YT'),
-            InlineKeyboardButton('Skp KP👤', url='https://t.me/Skp_Kp')
-        ],[
-            InlineKeyboardButton('👤 AlbertEinstein 👤', url='https://t.me/AlbertEinsteinTG')
-        ],[
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('Close 🔐', callback_data='close')
-        ]]
-        
-        reply_markup = InlineKeyboardMarkup(buttons)
-        
-        await update.message.edit_text(
-            Translation.ABOUT_TEXT,
-            reply_markup=reply_markup,
-            parse_mode="html"
-        )
-
-
-    elif query_data == "close":
-        await update.message.delete()
-
 
 
 def time_formatter(seconds: float) -> str:
@@ -1715,3 +1666,4 @@ def time_formatter(seconds: float) -> str:
         ((str(minutes) + "m, ") if minutes else "") + \
         ((str(seconds) + "s") if seconds else "")
     return tmp
+
