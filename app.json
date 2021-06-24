@@ -19,6 +19,10 @@
             "description": "Your API Hash From my.telegram.org or @UseTGXBot",
             "value": ""
         },
+        "TEXT_MEG_PH": {
+            "description": "TEXT_MEG_PH : Watch Tutorial Video😁",
+            "value": ""
+        },
         "BOT_TOKEN": {
             "description": "Your Bot Token From @BotFather",
             "value": ""
