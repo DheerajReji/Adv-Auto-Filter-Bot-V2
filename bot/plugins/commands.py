@@ -62,7 +62,7 @@ async def start(bot, update):
                         [
                             InlineKeyboardButton
                                 (
-                                    'Developer', url="https://t.me/the_johnniewalker"
+                                    'Developer', url="https://t.me/NEGANX"
                                 )
                         ]
                     ]
@@ -94,7 +94,7 @@ async def start(bot, update):
         return
 
     buttons = [[
-        InlineKeyboardButton('🤍 MY DEVELOPER 🤍', url='https://t.me/the_johnniewalker')
+        InlineKeyboardButton('🤍 MY DEVELOPER 🤍', url='https://t.me/NEGANX')
     ],[
         InlineKeyboardButton('🔆JOIN OUR GROUP🔆', url='https://t.me/joinchat/NfFdC-5j5YxhMTc1')
     ]]
