@@ -1,5 +1,5 @@
 #Kanged From @TroJanZheX
-from info import Client, filters
+from import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram import Client, filters
 import re
