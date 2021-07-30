@@ -19,7 +19,7 @@
             "description": "Your API Hash From my.telegram.org or @UseTGXBot",
             "value": ""
         },
-        "TEXT_MEG_PH": {
+        "OMDB_API_KEY": {
             "description": "TEXT_MEG_PH : Watch Tutorial Video😁",
             "value": ""
         },
